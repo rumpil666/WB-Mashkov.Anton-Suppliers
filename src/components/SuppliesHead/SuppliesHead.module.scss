@@ -28,32 +28,6 @@
     width: 20px;
     height: 20px;
   }
-
-  // &__search {
-  //   padding: 0;
-  //   margin: 0;
-  // }
-}
-
-@media screen and (max-width: 745px) {
-  .suppliesHead {
-
-    &__btn_span {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .suppliesHead {
-    &__search {
-      display: none;
-    }
-
-    &__subtitle_count {
-      display: none;
-    }
-  }
 }
 
 .search {
@@ -90,8 +64,33 @@
   &__select {
     width: 136px;
   }
+
+  &:has(> .search__select:hover) {
+    background-color: var(--colors-cloudy-alpha-008);
+  }
 }
 
-.search:has(> .search__select:hover) {
-  background-color: var(--colors-cloudy-alpha-008);
+@media screen and (max-width: 745px) {
+  .suppliesHead {
+
+    &__btn_span {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .suppliesHead {
+    &__search {
+      display: none;
+    }
+
+    &__subtitle_count {
+      display: none;
+    }
+  }
+
+  .search {
+    display: none;
+  }
 }
