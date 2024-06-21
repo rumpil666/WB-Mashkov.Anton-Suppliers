@@ -1,0 +1,21 @@
+.sidebar {
+  min-width: 92px;
+  max-width: 92px;
+  width: 100%;
+  background-color: var(--colors-ashy-solid-500);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+
+  &__logo {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 10px;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--colors-cloudy-alpha-008);
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    position: absolute;
+    flex-direction: column;
+    margin: 0;
+    display: none;
+    top: 36px;
+
+    &_show {
+      display: flex;
+    }
+  }
+}

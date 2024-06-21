@@ -1,0 +1,14 @@
+.supplies {
+  max-width: 1226px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .supplies {
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+}

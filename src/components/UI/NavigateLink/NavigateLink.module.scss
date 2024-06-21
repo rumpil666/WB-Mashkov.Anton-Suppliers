@@ -1,0 +1,31 @@
+.navLink {
+  display: flex;
+  text-decoration: none;
+  font-weight: 560;
+  font-size: 16px;
+  line-height: 20px;
+  transition: 0.2s;
+  border-radius: 10px;
+  align-items: center;
+  padding: 8px;
+  margin: 0;
+  color: var(--colors-cloudy-solid-500);
+  justify-content: center;
+
+  &__active {
+    @extend .navLink;
+    background-color: var(--colors-cloudy-solid-500);
+    color: var(--colors-ashy-solid-500);
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: var(--colors-cloudy-alpha-024);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navLink {
+    width: 90%;
+  }
+}

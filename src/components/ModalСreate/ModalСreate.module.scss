@@ -1,0 +1,135 @@
+.modalСreate {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-weight: 680;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--colors-cloudy-solid-500);
+  }
+
+  &__subtitle {
+    font-weight: 440;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--colors-cloudy-alpha-100)
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__formItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__placeholder {
+    font-weight: 560;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: var(--colors-cloudy-solid-500);
+    opacity: 48%;
+    padding: 6px 6px 0 6px;
+  }
+
+  &__select {
+    background-color: var(--colors-cloudy-alpha-008);
+    height: 44px;
+  }
+
+  &__containerInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 8px;
+    background-color: var(--colors-cloudy-alpha-008);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--colors-cloudy-alpha-024);
+    }
+
+    &:hover>.modalEdit__label {
+      opacity: 100%;
+    }
+  }
+
+  &__input {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    font-weight: 440;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--colors-cloudy-solid-500);
+  }
+
+  &__label {
+    font-weight: 440;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: right;
+    color: var(--colors-cloudy-solid-500);
+    opacity: 25%;
+  }
+
+  &__buttons {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__submit {
+    background-color: var(--colors-primary-solid-600);
+
+    &_disabled {
+      opacity: 50%;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background-color: var(--colors-primary-solid-500);
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .modalClear {
+    width: 343px;
+    gap: 16px;
+
+    &__form {
+      margin-bottom: 8px;
+    }
+
+    &__cancellation {
+      display: none;
+    }
+
+    &__submit {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

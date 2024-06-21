@@ -1,0 +1,36 @@
+.datepicker {
+  position: relative;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 8px;
+    background-color: var(--colors-cloudy-alpha-008);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--colors-cloudy-alpha-024);
+    }
+  }
+
+  &__input {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    font-weight: 440;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--colors-cloudy-solid-500);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    transition: 0.2s;
+  }
+}

@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  background-color: var(--colors-ashy-solid-500);
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  gap: 10px;
+  font-weight: 530;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--colors-cloudy-solid-500);
+  white-space: nowrap;
+  position: relative;
+
+  &:hover {
+    background-color: var(--colors-cloudy-alpha-008);
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

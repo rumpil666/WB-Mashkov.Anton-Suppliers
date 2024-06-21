@@ -1,0 +1,17 @@
+.nothingWastFound {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-back-2);
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+
+  &__title {
+    margin: auto 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--colors-plate-solid-500);
+  }
+}

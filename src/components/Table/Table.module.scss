@@ -1,0 +1,36 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    height: calc(100vh - 218px);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .table {
+
+    &__container {
+      height: calc(100vh - 190px);
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .table {
+
+    &__container {
+      height: calc(100vh - 152px);
+    }
+  }
+}

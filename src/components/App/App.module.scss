@@ -1,0 +1,25 @@
+.app {
+  max-width: 1366px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: var(--colors-ashy-solid-500);
+
+  &__content {
+    width: 100%;
+    margin: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    flex-direction: column;
+
+    &__content {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

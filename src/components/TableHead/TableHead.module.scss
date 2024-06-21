@@ -1,0 +1,143 @@
+.tableHead {
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 2px;
+
+  &__subtitle {
+    text-align: start;
+    width: 100%;
+    font-weight: 560;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: 0.01em;
+    color: var(--colors-cloudy-solid-500);
+
+    &_number {
+      min-width: 92px;
+      max-width: 92px;
+    }
+
+    &_date {
+      min-width: 120px;
+      max-width: 120px;
+    }
+
+    &_city {
+      min-width: 155px;
+      max-width: 155px;
+    }
+
+    &_count {
+      min-width: 137px;
+      max-width: 137px;
+    }
+
+    &_type {
+      min-width: 134px;
+      max-width: 134px;
+    }
+
+    &_warehouse {
+      max-width: 375px;
+    }
+
+    &_status {
+      min-width: 144px;
+      max-width: 144px;
+    }
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  .tableHead {
+    &__subtitle {
+
+      &_city {
+        min-width: 95px;
+        max-width: 95px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  .tableHead {
+    &__subtitle {
+
+      &_count {
+        min-width: 97px;
+        max-width: 97px;
+      }
+
+      &_type {
+        min-width: 94px;
+        max-width: 94px;
+      }
+
+      &_status {
+        min-width: 120px;
+        max-width: 120px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .tableHead {
+    padding: 8px 8px 8px 0;
+    justify-content: space-between;
+
+    &__subtitle {
+
+      &_status {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tableHead {
+    &__subtitle {
+
+      &_warehouse {
+        max-width: 125px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 814px) {
+  .tableHead {
+
+    &__subtitle_warehouse {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tableHead {
+
+    &__subtitle_type {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .tableHead {
+
+    &__subtitle_count {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .tableHead {
+    display: none;
+  }
+}

@@ -1,0 +1,222 @@
+.select {
+  position: relative;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 8px;
+    background-color: var(--colors-ashy-solid-500);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--colors-cloudy-alpha-024);
+    }
+
+    &_show {
+      background-color: var(--colors-cloudy-alpha-024);
+    }
+  }
+
+  &__label {
+    color: var(--colors-cloudy-solid-500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    transition: 0.2s;
+
+    &_show {
+      rotate: 180deg;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    background-color: var(--colors-cloudy-solid-500);
+    min-width: 192px;
+    width: 100%;
+    border-radius: 8px;
+    top: 48px;
+    display: none;
+    z-index: 10;
+    max-height: 100vh;
+    overflow: auto;
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__option {
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color: var(--colors-plate-solid-500);
+    }
+
+    &:first-child {
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &_active {
+      background-color: var(--colors-plate-solid-500);
+      cursor: default;
+    }
+  }
+}
+
+.optionsMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &__content {
+    padding: 16px 16px 0px 16px;
+    background: var(--colors-ashy-solid-500);
+    min-width: 360px;
+    max-width: 496px;
+    max-height: 360px;
+    height: fit-content;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--colors-cloudy-alpha-024);
+    padding: 0px 0px 16px 0px;
+    width: 100%;
+    height: 44px;
+    font-weight: 560;
+    font-size: 22px;
+    line-height: 127%;
+    color: var(--colors-cloudy-solid-500);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    padding: 0;
+    z-index: 2;
+    background-color: var(--colors-ashy-solid-500);
+    border: none;
+    opacity: 25%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  &__options {
+    width: 100%;
+    overflow-x: hidden;
+    max-height: 240px;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    padding: 12px 0;
+    font-weight: 440;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--colors-cloudy-solid-500);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_active {
+      @extend .optionsMobile__item;
+
+      &::after {
+        content: url(../../../images/icon-check.svg);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .select {
+
+    &__box {
+
+      &_show {
+        border-bottom: 1px solid var(--colors-cloudy-alpha-008);
+        z-index: 100;
+      }
+    }
+
+    &__options {
+      border-radius: 0 0 8px 8px;
+      background-color: var(--colors-cloudy-alpha-024);
+      top: 44px;
+
+      &_show {
+        display: none;
+      }
+    }
+
+    &__option {
+      color: var(--colors-cloudy-solid-500);
+
+      &:first-child {
+        border-radius: 0;
+      }
+
+      &:last-child {
+        border-radius: 0;
+      }
+
+      &_active {
+        background-color: var(--colors-cloudy-alpha-008);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .optionsMobile {
+    &_show {
+      display: flex;
+    }
+  }
+}

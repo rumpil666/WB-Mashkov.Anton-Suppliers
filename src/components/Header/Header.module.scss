@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  display: none;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 900px;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px 11px;
+  border-bottom: 1px solid #424146;
+  margin-bottom: 24px;
+
+  &__logo {
+    position: absolute;
+    margin-left: 40%;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    display: flex;
+  }
+}
